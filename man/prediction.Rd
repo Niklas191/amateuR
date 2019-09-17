@@ -18,7 +18,7 @@ prediction(data, estimate, teamname, method = "future")
 \value{
 A description of the columns of both prediction data frames
 \tabular{ll}{
- Comment \tab A Warning if prediction may not be accurate \cr
+ Comment \tab A warning if prediction may not be accurate \cr
  Home Estimate \tab Prediction of the number of goals scored by the home team, rounded to nearest integer
 }
 }

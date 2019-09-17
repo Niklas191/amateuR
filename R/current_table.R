@@ -22,9 +22,10 @@ current_table <- function(league_data) {
   data <- data[-ind]
 
   # Reshape the data vector to a two dimentional dataframe representing the table
-  data <- matrix(data, ncol = 5, byrow = TRUE) %>% as.data.frame()
+  data <- matrix(data, ncol = 5, byrow = TRUE) %>% as.data.frame(stringsAsFactors = FALSE)
   data <- data[-1, ]
-  colnames(data) <- c("Pl.", "Verein", "Sp.", "Diff.", "Pkt.")
+  colnames(data) <- c("Position", "Team", "Games", "Goal Diff.", "Points")
+  rownames(data) <- as.character(seq(1,nrow(data)))
 
   return(data)
 }
