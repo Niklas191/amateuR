@@ -19,7 +19,9 @@ prediction(data, estimate, teamname, method = "future")
 A description of the columns of both prediction data frames
 \tabular{ll}{
  Comment \tab A warning if prediction may not be accurate \cr
- Home Estimate \tab Prediction of the number of goals scored by the home team, rounded to nearest integer
+ Home Estimate \tab Prediction of the number of goals scored by the home team, rounded to nearest integer\cr
+ Away Estimate \tab Prediction of the number of goals scored by the away team, rounded to nearest integer \cr
+ Final Score \tab the full time score for past games
 }
 }
 \description{
