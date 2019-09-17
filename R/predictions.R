@@ -5,6 +5,11 @@
 #' @param estimate Output of amateuR::estimate_params() using the same data
 #' @param teamname The name of the team of intrest as string
 #' @param method Optional parameter which takes the values "all", "past" or "future" to filter predictions
+#' @return A description of the columns of both prediction data frames
+#' \tabular{ll}{
+#'  Comment \tab A warning if prediction may not be accurate \cr
+#'  Home Estimate \tab Prediction of the number of goals scored by the home team, rounded to nearest integer
+#' }
 #' @importFrom dplyr filter
 #' @examples
 #' my_games <- all_game_data(download_league_data(
