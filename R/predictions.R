@@ -78,6 +78,7 @@ prediction <- function(data, estimate, teamname, method = "future") {
       CI[paste0("attack.", all_teams[i]), "estimate"])
     mu[i + n_teams] <- exp(CI[paste0("defense.", all_teams[i]), "estimate"] + CI[attack.teamname, "estimate"])
 
+    # for completed matches fill in the full time score
     if (nrow(dplyr::filter(dat, Home == teamname & Away == vteamname)) == 1) {
       completed[i] <- as.character(dplyr::filter(dat, Home == teamname & Away == vteamname)$FT)
     }
@@ -100,7 +101,7 @@ prediction <- function(data, estimate, teamname, method = "future") {
     }
 
     # if the exact point estimates are close together we can not be as sure about the prediction
-    if (0.25 < abs(lambda[i] - mu[i]) & abs(lambda[i] - mu[i]) < 0.5) { # set tolerance here
+    if (0.25 < abs(lambda[i] - mu[i]) & abs(lambda[i] - mu[i]) < 0.5) {
       Comment[i] <- "Warning: prediction may not be accurate"
     }
   }
@@ -357,6 +358,7 @@ prediction_interval <- function(data, estimate, teamname, method = "future") {
   results5 <- list(results2, results3)
   names(results5) <- c("Completed", "Upcoming")
 
+  # return correct subset of results depending on value of method parameter
   if (method == "future") {
     return(results3)
   }

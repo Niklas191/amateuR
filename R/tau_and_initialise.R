@@ -9,6 +9,7 @@
 #' @keywords internal
 
 tau <- Vectorize(function(x, y, lambda, mu, rho) {
+  # correction function as detailed in Dixon Coles Paper
   if (x == 0 & y == 0) {
     return(1 - (lambda * mu * rho))
   }
@@ -47,7 +48,7 @@ estimate_params <- function(data, alpha = 0.9) {
   if (alpha >= 1 | alpha <= 0) {
     stop("Alpha must be >0 and <1")
   }
-
+  # print full time result in one column
   dat <- data$past_games
   for (i in 1:nrow(dat)) {
     dat$FT[i] <- paste0(as.character(dat$Goals_Home[i]), ":", as.character(dat$Goals_Away[i]))
@@ -75,7 +76,7 @@ estimate_params <- function(data, alpha = 0.9) {
     warning("Not all teams have played matches home and away. Predictions may be unreliable")
   }
 
-  # list of params with initial values
+  # create list of params with initial values to use in optimisation
   init <- list(
     attack = rep(0.4, n_teams), defense = rep(-0.3, n_teams),
     home = 0.3, rho = -0.1
@@ -84,7 +85,7 @@ estimate_params <- function(data, alpha = 0.9) {
   names(init$attack) <- all_teams
   names(init$defense) <- all_teams
 
-  # optimisation function using negative log_lik
+  # optimisation function using negloglik() defined in internal function
   optim_res <- optim(
     par = unlist(init),
     fn = negloglik,

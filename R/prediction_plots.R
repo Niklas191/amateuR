@@ -120,7 +120,7 @@ plot_predictions <- function(game_data, estimate, team_name, method = "future") 
 
   visitor_teams <- as.vector(sort(unique(dat$Home)))
   home_teams <- as.vector(sort(unique(dat$Away)))
-  all_teams <- sort(unique(c(visitor_teams, home_teams))) ## all teams who have played at least once at home or away
+  all_teams <- sort(unique(c(visitor_teams, home_teams))) # all teams who have played at least once at home or away
   n_teams <- length(all_teams)
 
   if (!(method %in% c("futureH", "allH", "futureHA"))) {
