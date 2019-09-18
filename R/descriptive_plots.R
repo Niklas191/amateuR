@@ -4,6 +4,12 @@
 #' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
 #' @param team A team name as string.
 #' @param cumulated If \code{TRUE}, the cummulated goal differences are plotted, if \code{FALSE} the individual differences for every game are plotted.
+#' @details Description of the colors of the data points:
+#' \tabular{ll}{
+#' Green \tab  Don matches \cr
+#' Orange \tab  Draws \cr
+#' Red \tab  Lost matches
+#' }
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
 #' @importFrom graphics abline legend par plot plot.new points rect segments
@@ -51,6 +57,12 @@ plot_goal_difference <- function(game_data, team, cumulated = TRUE) {
 #' This function plots the cummulated points for one specified team.
 #' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
 #' @param team  A team name as string.
+#' @details Description of the colors of the data points:
+#' \tabular{ll}{
+#' Green \tab  Don matches \cr
+#' Orange \tab  Draws \cr
+#' Red \tab  Lost matches
+#' }
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
 #' @importFrom graphics abline legend par plot plot.new points rect segments

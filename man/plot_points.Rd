@@ -14,6 +14,14 @@ plot_points(game_data, team)
 \description{
 This function plots the cummulated points for one specified team.
 }
+\details{
+Description of the colors of the data points:
+\tabular{ll}{
+Green \tab  Don matches \cr
+Orange \tab  Draws \cr
+Red \tab  Lost matches
+}
+}
 \examples{
 data <- download_league_data("https://www.kicker.de/kreisliga-osterode-fb-1/spieltag/2019-20/-1")
 data <- all_game_data(data)
