@@ -138,7 +138,7 @@ all_game_data_filter <- function(L, team) {
 
 #' Shift a vector
 #'
-#' This is an internal function for \code{\link[amateuR]{all_game_data()}}, it shifts the values in vec by the values of the shift vector.
+#' This is an internal function for \code{\link[amateuR]{all_game_data}}, it shifts the values in vec by the values of the shift vector.
 #' @param v A numerical vector to shift
 #' @param l A numerical vector with the shifting parameters
 #' @param sorted If \code{TRUE}, the returned vector is sorted

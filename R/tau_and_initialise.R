@@ -1,6 +1,6 @@
 #' Tau(x,y)
 #'
-#' This is an internal function for \code{\link[amateuR]{negloglik}}. It allows you to compensate for the lack of independence in the bivariate Poisson Model.
+#' This is an internal function for \code{\link[amateuR]{negloglik}}. It allows one to compensate for the lack of independence in the bivariate Poisson Model for low scoring matches.
 #' @param x number of home goals
 #' @param y number of away goals
 #' @param lambda expected number of home goals

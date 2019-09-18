@@ -11,7 +11,7 @@ amateuR is a R Package for obtaining data for amateur German football leagues an
 \details{
 The package provides functions to download German amateur football data from kicker.de by using web scraping methods and the rvest package.
 Based on the downloaded data the table, individual game results and the date and time of future games can be shown.
-It does also provide a function for predicting future games.
+It also provides a function for predicting future games.
 Some of the results can visualized using specific plot functions.
 }
 \author{

@@ -11,9 +11,9 @@ plot_single_match(game_data, estimate, home, away)
 
 \item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
-\item{home}{Home team name as string}
+\item{home}{Home team name as a string}
 
-\item{away}{away team name as string}
+\item{away}{Away team name as a string}
 }
 \description{
 This function allows the user to plot the dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis.

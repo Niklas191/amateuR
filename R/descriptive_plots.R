@@ -95,7 +95,7 @@ plot_points <- function(game_data, team) {
 #'
 #' This is an internal function for \code{\link[amateuR]{plot_goal_difference}} and \code{\link[amateuR]{plot_points}}.
 #' It performs a test if the team name is correct and if there are enought data points for a plot.
-#' @param game_data A league data vector, which is created with \code{\link[amateuR]{download_game_data}}.
+#' @param game_data A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 #' @param team A team name as string.
 #' @importFrom magrittr %>%
 #' @keywords internal

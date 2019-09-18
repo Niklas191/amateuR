@@ -14,6 +14,6 @@ sv(vec, shift, sorted = TRUE)
 \item{l}{A numerical vector with the shifting parameters}
 }
 \description{
-This is an internal function for \code{\link[amateuR]{all_game_data()}}, it shifts the values in vec by the values of the shift vector.
+This is an internal function for \code{\link[amateuR]{all_game_data}}, it shifts the values in vec by the values of the shift vector.
 }
 \keyword{internal}

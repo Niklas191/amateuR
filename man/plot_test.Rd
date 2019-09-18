@@ -7,7 +7,7 @@
 plot_test(game_data, team)
 }
 \arguments{
-\item{game_data}{A league data vector, which is created with \code{\link[amateuR]{download_game_data}}.}
+\item{game_data}{A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.}
 
 \item{team}{A team name as string.}
 }
