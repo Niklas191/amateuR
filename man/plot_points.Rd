@@ -7,7 +7,7 @@
 plot_points(game_data, team)
 }
 \arguments{
-\item{game_data}{A league data vector, which is created with amateuR::download_game_data().}
+\item{game_data}{Output of the function \code{\link[amateuR]{all_game_data}}.}
 
 \item{team}{A team name as string.}
 }

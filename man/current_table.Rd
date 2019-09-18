@@ -7,10 +7,10 @@
 current_table(league_data)
 }
 \arguments{
-\item{league_data}{A league data vector, which is created with amateuR::download_league_data().}
+\item{league_data}{A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.}
 }
 \description{
-This function extracts the current table from the league data vector, which is created with amateuR::download_league_data()
+This function extracts the current table from the league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 }
 \examples{
 current_table(download_league_data(

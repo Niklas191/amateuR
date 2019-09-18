@@ -7,19 +7,19 @@
 plot_predictions(game_data, estimate, team_name, method = "future")
 }
 \arguments{
-\item{game_data}{Output of amateuR::all_game_data() with parameter team = NA}
+\item{game_data}{Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}}
 
-\item{estimate}{Output of amateuR::estimate_params() using the same data}
+\item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
 \item{team_name}{Home team name as string}
 
-\item{method}{method = "futureH" returns all predictions for future home matches \cr
-method = "futureHA" returns all predictions for future home and away matchs \cr
-method = "allH" returns all predictions for past and future home matches}
+\item{method}{\code{method = "futureH"} returns all predictions for future home matches \cr
+\code{method = "futureHA"} returns all predictions for future home and away matchs \cr
+\code{method = "allH"} returns all predictions for past and future home matches}
 }
 \description{
 This function allows the user to plot the Dixon Coles estimate in a 2d diagram for a given team.
-Use the optional argument "method" to return all or just future matches.
+Use the optional argument \code{method} to return all or just future matches.
 }
 \examples{
 my_games <- all_game_data(download_league_data(

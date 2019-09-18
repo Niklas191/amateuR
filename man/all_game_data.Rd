@@ -7,12 +7,12 @@
 all_game_data(league_data, team = NA)
 }
 \arguments{
-\item{league_data}{A league data vector, which is created with amateuR::download_league_data().}
+\item{league_data}{A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.}
 
-\item{team}{An optional parameter to filter the list for a given team name}
+\item{team}{\code{NA} or an optional parameter to filter the list for a given team name}
 }
 \description{
-This function extracts past gameday results and date and time of future games from the league data vector, which is created with amateuR::download_league_data().
+This function extracts past gameday results and date and time of future games from the league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 }
 \examples{
 all_game_data(download_league_data(

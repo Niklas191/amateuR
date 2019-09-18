@@ -1,9 +1,9 @@
 #' Plot the goal differences
 #'
 #' This function plots the goal differences for one specified team.
-#' @param game_data A league data vector, which is created with amateuR::download_game_data().
+#' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
 #' @param team A team name as string.
-#' @param cumulated If TRUE, the cummulated goal differences are plotted, if FALSE the individual differences for every game are plotted.
+#' @param cumulated If \code{TRUE}, the cummulated goal differences are plotted, if \code{FALSE} the individual differences for every game are plotted.
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
 #' @importFrom graphics abline legend par plot plot.new points rect segments
@@ -19,9 +19,6 @@ plot_goal_difference <- function(game_data, team, cumulated = TRUE) {
 
   data <- game_data$past_games %>% dplyr::filter(Home == team | Away == team)
 
-  data$Goals_Home <- as.numeric(as.character(data$Goals_Home))
-  data$Goals_Away <- as.numeric(as.character(data$Goals_Away))
-
   data$diff <- 0
   data$diff[data$Home == team] <- data$Goals_Home[data$Home == team] - data$Goals_Away[data$Home == team]
   data$diff[data$Away == team] <- data$Goals_Away[data$Away == team] - data$Goals_Home[data$Away == team]
@@ -31,7 +28,7 @@ plot_goal_difference <- function(game_data, team, cumulated = TRUE) {
   data$game <- seq(1, dim(data)[1], 1)
 
   if (cumulated == FALSE) {
-    plot(x = seq(0, max(data$game), length.out = 3), y = seq(min(data$diff), max(data$diff), length.out = 3), main = paste("Goal differences for", team), xlab = "Gameday", ylab = "Goal difference", type = "n")
+    plot(x = seq(1, max(data$game), length.out = 2), y = seq(min(data$diff), max(data$diff), length.out = 2), main = paste("Goal differences for", team), xlab = "Gameday", ylab = "Goal difference", type = "n")
     abline(h = 0, col = "grey")
     points(x = data$game, y = data$diff, col = "black", type = "l", lty = "dotted")
     points(x = data$game[data$diff > 0], y = data$diff[data$diff > 0], pch = 19, col = "green", bg = "green")
@@ -40,7 +37,7 @@ plot_goal_difference <- function(game_data, team, cumulated = TRUE) {
   }
 
   if (cumulated == TRUE) {
-    plot(x = seq(0, max(data$game), length.out = 3), y = seq(min(data$cumdiff), max(data$cumdiff), length.out = 3), main = paste("Cumulated goal difference for", team), xlab = "Gameday", ylab = "Cumulated goal difference", type = "n")
+    plot(x = seq(1, max(data$game), length.out = 2), y = seq(min(data$cumdiff), max(data$cumdiff), length.out = 2), main = paste("Cumulated goal difference for", team), xlab = "Gameday", ylab = "Cumulated goal difference", type = "n")
     abline(h = 0, col = "grey")
     points(x = data$game, y = data$cumdiff, col = "black", type = "l")
     points(x = data$game[data$diff > 0], y = data$cumdiff[data$diff > 0], pch = 19, col = "green", bg = "green")
@@ -52,7 +49,7 @@ plot_goal_difference <- function(game_data, team, cumulated = TRUE) {
 #' Plot the points
 #'
 #' This function plots the cummulated points for one specified team.
-#' @param game_data A league data vector, which is created with amateuR::download_game_data().
+#' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
 #' @param team  A team name as string.
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
@@ -80,8 +77,8 @@ plot_points <- function(game_data, team) {
   data$game <- seq(1, dim(data)[1], 1)
 
   plot(
-    x = seq(0, max(data$game), length.out = 3),
-    y = seq(0, max(data$cum_points), length.out = 3),
+    x = seq(1, max(data$game), length.out = 2),
+    y = seq(0, max(data$cum_points), length.out = 2),
     main = paste("Cumulated points for", team, "over time"),
     xlab = "Gameday",
     ylab = "Cumulated points",
@@ -96,8 +93,9 @@ plot_points <- function(game_data, team) {
 
 #' plot_test
 #'
-#' This is an internal function for plot_goal_difference() and plot_points(). It performs an test if the team name correct and if there are enought data points for a plot.
-#' @param game_data A league data vector, which is created with amateuR::download_game_data().
+#' This is an internal function for \code{\link[amateuR]{plot_goal_difference}} and \code{\link[amateuR]{plot_points}}.
+#' It performs a test if the team name is correct and if there are enought data points for a plot.
+#' @param game_data A league data vector, which is created with \code{\link[amateuR]{download_game_data}}.
 #' @param team A team name as string.
 #' @importFrom magrittr %>%
 #' @keywords internal

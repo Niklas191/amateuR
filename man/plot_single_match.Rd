@@ -7,16 +7,16 @@
 plot_single_match(game_data, estimate, home, away)
 }
 \arguments{
-\item{game_data}{Output of amateuR::all_game_data() with parameter team = NA}
+\item{game_data}{Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}}
 
-\item{estimate}{Output of amateuR::estimate_params() using the same data}
+\item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
 \item{home}{Home team name as string}
 
 \item{away}{away team name as string}
 }
 \description{
-This function allows the user to plot the dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis
+This function allows the user to plot the dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis.
 }
 \examples{
 my_games <- all_game_data(download_league_data(

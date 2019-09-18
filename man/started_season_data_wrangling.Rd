@@ -7,6 +7,6 @@
 started_season_data_wrangling(data, future_games)
 }
 \description{
-This is an internal function for all_game_data(), it performs the data wrangling if the season is already started.
+This is an internal function for \code{\link[amateuR]{all_game_data}}, it performs the data wrangling if the season is already started.
 }
 \keyword{internal}

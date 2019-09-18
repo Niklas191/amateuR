@@ -1,8 +1,8 @@
 #' Plotting the Dixon Coles prediction with confidence interval for a given match
 #'
-#' This function allows the user to plot the dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis
-#' @param game_data Output of amateuR::all_game_data() with parameter team = NA
-#' @param estimate Output of amateuR::estimate_params() using the same data
+#' This function allows the user to plot the dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis.
+#' @param game_data Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}
+#' @param estimate Output of \code{\link[amateuR]{estimate_params}} using the same data
 #' @param home Home team name as string
 #' @param away away team name as string
 #' @importFrom dplyr filter
@@ -90,13 +90,13 @@ plot_single_match <- function(game_data, estimate, home, away) {
 #' Plotting the Dixon Coles prediction with confidence interval for a single team
 #'
 #' This function allows the user to plot the Dixon Coles estimate in a 2d diagram for a given team.
-#' Use the optional argument "method" to return all or just future matches.
-#' @param game_data Output of amateuR::all_game_data() with parameter team = NA
-#' @param estimate Output of amateuR::estimate_params() using the same data
+#' Use the optional argument \code{method} to return all or just future matches.
+#' @param game_data Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}
+#' @param estimate Output of \code{\link[amateuR]{estimate_params}} using the same data
 #' @param team_name Home team name as string
-#' @param method method = "futureH" returns all predictions for future home matches \cr
-#' method = "futureHA" returns all predictions for future home and away matchs \cr
-#' method = "allH" returns all predictions for past and future home matches
+#' @param method \code{method = "futureH"} returns all predictions for future home matches \cr
+#' \code{method = "futureHA"} returns all predictions for future home and away matchs \cr
+#' \code{method = "allH"} returns all predictions for past and future home matches
 #' @importFrom dplyr filter
 #' @importFrom graphics abline legend par plot plot.new points rect segments
 #' @examples

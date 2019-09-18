@@ -7,11 +7,12 @@
 plot_test(game_data, team)
 }
 \arguments{
-\item{game_data}{A league data vector, which is created with amateuR::download_game_data().}
+\item{game_data}{A league data vector, which is created with \code{\link[amateuR]{download_game_data}}.}
 
 \item{team}{A team name as string.}
 }
 \description{
-This is an internal function for plot_goal_difference() and plot_points(). It performs an test if the team name correct and if there are enought data points for a plot.
+This is an internal function for \code{\link[amateuR]{plot_goal_difference}} and \code{\link[amateuR]{plot_points}}.
+It performs a test if the team name is correct and if there are enought data points for a plot.
 }
 \keyword{internal}

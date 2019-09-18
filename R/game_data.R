@@ -1,8 +1,8 @@
 #' Extract past gameday results and date and time of future games from the league data vector
 #'
-#' This function extracts past gameday results and date and time of future games from the league data vector, which is created with amateuR::download_league_data().
-#' @param league_data A league data vector, which is created with amateuR::download_league_data().
-#' @param team An optional parameter to filter the list for a given team name
+#' This function extracts past gameday results and date and time of future games from the league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
+#' @param league_data A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
+#' @param team \code{NA} or an optional parameter to filter the list for a given team name
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
 #' @examples
@@ -74,7 +74,7 @@ all_game_data <- function(league_data, team = NA) {
 
 #' started_season_data_wrangling
 #'
-#' This is an internal function for all_game_data(), it performs the data wrangling if the season is already started.
+#' This is an internal function for \code{\link[amateuR]{all_game_data}}, it performs the data wrangling if the season is already started.
 #' @importFrom magrittr %>%
 #' @keywords internal
 
@@ -116,9 +116,9 @@ started_season_data_wrangling <- function(data, future_games) {
 
 #' all_game_data_filter
 #'
-#' This is an internal function for all_game_data(), it perfoms the optional filter for all_game_data().
+#' This is an internal function for \code{\link[amateuR]{all_game_data}}, it perfoms the optional filter for \code{\link[amateuR]{all_game_data}}.
 #' @param L Unfiltered result
-#' @param team NA, a team name or a vector of team names. If NA (default), all games are returned. If team is specified, only the games of this team(s) are returned. If you want to use the result for prediction, use NA.
+#' @param team \code{NA}, a team name or a vector of team names. If \code{NA} (default), all games are returned. If team is specified, only the games of this team(s) are returned. If you want to use the result for prediction, use NA.
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
 #' @keywords internal
@@ -138,9 +138,10 @@ all_game_data_filter <- function(L, team) {
 
 #' Shift a vector
 #'
-#' This is an internal function for all_game_data(), it shifts the values in vec by the values of the shift vector. The new vector is sorted.
-#' @param v A numerical vector
+#' This is an internal function for \code{\link[amateuR]{all_game_data()}}, it shifts the values in vec by the values of the shift vector.
+#' @param v A numerical vector to shift
 #' @param l A numerical vector with the shifting parameters
+#' @param sorted If \code{TRUE}, the returned vector is sorted
 #' @importFrom magrittr %>%
 #' @keywords internal
 

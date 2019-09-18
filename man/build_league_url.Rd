@@ -9,10 +9,10 @@ build_league_url(league_url_name, season = "2018-19")
 \arguments{
 \item{league_url_name}{An unique name for the leaugue used in the URL. Copy this one from kicker.de!}
 
-\item{season}{The season you are interested in. Since a season always lasts from summer to summer, these are two years. The format is "YYYY-YY" and the default value is "2018-19". Please make sure, the season of interest is still/already online.}
+\item{season}{The season you are interested in. Since a season always lasts from summer to summer, these are two years. The format is \code{"YYYY-YY"} and the default value is \code{"2018-19"}. Please make sure, the season of interest is still/already online.}
 }
 \description{
-This function allows you to build a URL for using the function download_football_data()
+This function allows you to build a URL for using the function \code{\link[amateuR]{download_league_data}}.
 }
 \examples{
 build_league_url("berlin-kreisklasse-a-staffel-1-6322", season = "2019-20")

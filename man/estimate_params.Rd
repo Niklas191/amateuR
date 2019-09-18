@@ -7,13 +7,13 @@
 estimate_params(data, alpha = 0.9)
 }
 \arguments{
-\item{data}{Output of all_game_data() without specifying a team}
+\item{data}{Output of \code{\link[amateuR]{all_game_data}} without specifying a team}
 
 \item{alpha}{Significance level for confidence intervals}
 }
 \description{
 Set up and optimise a bipoisson likelihood function with the DC correction.
- This function returns parameter estimates with Wald Confidence intervals
+This function returns parameter estimates with Wald Confidence intervals.
 }
 \examples{
 my_games <- all_game_data(download_league_data(

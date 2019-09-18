@@ -21,6 +21,6 @@ negloglik(params, goals_home, goals_visitor, team_home, team_visitor,
 \item{structure}{structure}
 }
 \description{
-This is an internal function for estimates()
+This is an internal function for \code{\link[amateuR]{estimate_params}}
 }
 \keyword{internal}

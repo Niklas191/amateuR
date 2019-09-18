@@ -7,16 +7,16 @@
 prediction_interval(data, estimate, teamname, method = "future")
 }
 \arguments{
-\item{data}{Output of amateuR::all_game_data() with parameter team = NA}
+\item{data}{Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}}
 
-\item{estimate}{Output of amateuR::estimate_params() using the same data}
+\item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
 \item{teamname}{The name of the team of intrest as string}
 
-\item{method}{Optional parameter which takes the values "all", "past" or "future" to filter predictions}
+\item{method}{Optional parameter which takes the values \code{"all"}, \code{"past"} or \code{"future"} to filter predictions}
 }
 \description{
-This function returns point estimates for the number of home and away goals for all remaining matches for one team
+This function returns point estimates for the number of home and away goals for all remaining matches for one team.
 }
 \examples{
 my_games <- all_game_data(download_league_data(

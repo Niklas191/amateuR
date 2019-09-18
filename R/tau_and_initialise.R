@@ -1,6 +1,6 @@
 #' Tau(x,y)
 #'
-#' This is an internal function for negloglik(). It allows you to compensate for the lack of independence in the bivariate Poisson Model.
+#' This is an internal function for \code{\link[amateuR]{negloglik}}. It allows you to compensate for the lack of independence in the bivariate Poisson Model.
 #' @param x number of home goals
 #' @param y number of away goals
 #' @param lambda expected number of home goals
@@ -28,9 +28,9 @@ tau <- Vectorize(function(x, y, lambda, mu, rho) {
 
 #' Initialising data
 #'
-#'  Set up and optimise a bipoisson likelihood function with the DC correction.
-#'  This function returns parameter estimates with Wald Confidence intervals
-#' @param data Output of all_game_data() without specifying a team
+#' Set up and optimise a bipoisson likelihood function with the DC correction.
+#' This function returns parameter estimates with Wald Confidence intervals.
+#' @param data Output of \code{\link[amateuR]{all_game_data}} without specifying a team
 #' @param alpha Significance level for confidence intervals
 #' @importFrom MASS ginv
 #' @importFrom stats dpois optim qnorm
@@ -112,7 +112,7 @@ estimate_params <- function(data, alpha = 0.9) {
 
 #' Negative loglikelihood function
 #'
-#' This is an internal function for estimates()
+#' This is an internal function for \code{\link[amateuR]{estimate_params}}
 #' @param params likelihood param
 #' @param goals_home likelihood param
 #' @param goals_visitor likelihood param

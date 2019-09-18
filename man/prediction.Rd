@@ -7,25 +7,25 @@
 prediction(data, estimate, teamname, method = "future")
 }
 \arguments{
-\item{data}{Output of amateuR::all_game_data() with parameter team = NA}
+\item{data}{Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}}
 
-\item{estimate}{Output of amateuR::estimate_params() using the same data}
+\item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
 \item{teamname}{The name of the team of intrest as string}
 
-\item{method}{Optional parameter which takes the values "all", "past" or "future" to filter predictions}
+\item{method}{Optional parameter which takes the values \code{"all"}, \code{"past"} or \code{"future"} to filter predictions}
 }
 \value{
-A description of the columns of both prediction data frames
+A description of the columns of both prediction data frames:
 \tabular{ll}{
- Comment \tab A warning if prediction may not be accurate \cr
- Home Estimate \tab Prediction of the number of goals scored by the home team, rounded to nearest integer\cr
- Away Estimate \tab Prediction of the number of goals scored by the away team, rounded to nearest integer \cr
- Final Score \tab the full time score for past games
+ \code{Comment} \tab A warning if prediction may not be accurate \cr
+ \code{Home Estimate} \tab Prediction of the number of goals scored by the home team, rounded to nearest integer\cr
+ \code{Away Estimate} \tab Prediction of the number of goals scored by the away team, rounded to nearest integer \cr
+ \code{Final Score} \tab the full time score for past games
 }
 }
 \description{
-This function returns point estimates for the number of home and away goals for all remaining matches for one team
+This function returns point estimates for the number of home and away goals for all remaining matches for one team.
 }
 \examples{
 my_games <- all_game_data(download_league_data(

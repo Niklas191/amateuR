@@ -7,11 +7,11 @@
 plot_goal_difference(game_data, team, cumulated = TRUE)
 }
 \arguments{
-\item{game_data}{A league data vector, which is created with amateuR::download_game_data().}
+\item{game_data}{Output of the function \code{\link[amateuR]{all_game_data}}.}
 
 \item{team}{A team name as string.}
 
-\item{cumulated}{If TRUE, the cummulated goal differences are plotted, if FALSE the individual differences for every game are plotted.}
+\item{cumulated}{If \code{TRUE}, the cummulated goal differences are plotted, if \code{FALSE} the individual differences for every game are plotted.}
 }
 \description{
 This function plots the goal differences for one specified team.

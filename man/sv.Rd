@@ -7,11 +7,13 @@
 sv(vec, shift, sorted = TRUE)
 }
 \arguments{
-\item{v}{A numerical vector}
+\item{sorted}{If \code{TRUE}, the returned vector is sorted}
+
+\item{v}{A numerical vector to shift}
 
 \item{l}{A numerical vector with the shifting parameters}
 }
 \description{
-This is an internal function for all_game_data(), it shifts the values in vec by the values of the shift vector. The new vector is sorted.
+This is an internal function for \code{\link[amateuR]{all_game_data()}}, it shifts the values in vec by the values of the shift vector.
 }
 \keyword{internal}

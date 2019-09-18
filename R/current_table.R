@@ -1,7 +1,7 @@
 #' Extract the current table from the league data vector
 #'
-#' This function extracts the current table from the league data vector, which is created with amateuR::download_league_data()
-#' @param league_data A league data vector, which is created with amateuR::download_league_data().
+#' This function extracts the current table from the league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
+#' @param league_data A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 #' @examples
 #' current_table(download_league_data(
 #'   "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"

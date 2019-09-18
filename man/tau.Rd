@@ -18,6 +18,6 @@ tau(x, y, lambda, mu, rho)
 \item{rho}{correlation term}
 }
 \description{
-This is an internal function for negloglik(). It allows you to compensate for the lack of independence in the bivariate Poisson Model.
+This is an internal function for \code{\link[amateuR]{negloglik}}. It allows you to compensate for the lack of independence in the bivariate Poisson Model.
 }
 \keyword{internal}
