@@ -11,9 +11,26 @@ prediction_interval(data, estimate, teamname, method = "future")
 
 \item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
-\item{teamname}{The name of the team of intrest as string}
+\item{teamname}{The name of the team of intrest as a string}
 
 \item{method}{Optional parameter which takes the values \code{"all"}, \code{"past"} or \code{"future"} to filter predictions}
+}
+\value{
+A description of the columns of prediction data frames, \emph{upcoming} and \emph{future}:
+\tabular{ll}{
+ \code{Home L} \tab Lower bound of confidence interval for the predicted number of goals scored by the \emph{home team} \cr
+ \code{Home Estimate} \tab Prediction of the number of goals scored by the \emph{home team}, rounded to one decimal point \cr
+ \code{Home U} \tab Upper bound of confidence interval for the predicted number of goals scored by the \emph{home team} \cr
+ \code{} \tab \cr
+ \code{Away L} \tab Lower bound of confidence interval for the predicted number of goals scored by the \emph{away team} \cr
+ \code{Away Estimate} \tab Prediction of the number of goals scored by the \emph{away team}, rounded to nearest integer \cr
+ \code{Away U} \tab Upper bound of confidence interval for the predicted number of goals scored by the \emph{away team} \cr
+ \code{} \tab \cr
+ \code{Note H} \tab The number of stars indicate the with of the confidence interval for the \emph{home team}. The more stars the larger the interval \cr
+ \code{Note A} \tab The number of stars indicate the with of the confidence interval for the \emph{away team}. The more stars the larger the interval \cr
+ \code{Predicted result} \tab Home and away intervals are compared and H,D,A is returned based on the prediction \cr
+ \code{Final Score} \tab For a completed match the final full time score is given here
+}
 }
 \description{
 This function returns point estimates for the number of home and away goals for all remaining matches for one team.
@@ -23,7 +40,7 @@ my_games <- all_game_data(download_league_data(
   "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
 ))
 estimate <- estimate_params(data = my_games, alpha = 0.9)
-#
+
 prediction_interval(
   data = my_games, estimate = estimate,
   teamname = "1. FC Schöneberg III", method = "all"

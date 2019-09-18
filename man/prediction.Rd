@@ -11,12 +11,12 @@ prediction(data, estimate, teamname, method = "future")
 
 \item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
-\item{teamname}{The name of the team of intrest as string}
+\item{teamname}{The name of the team of intrest as a string}
 
 \item{method}{Optional parameter which takes the values \code{"all"}, \code{"past"} or \code{"future"} to filter predictions}
 }
 \value{
-A description of the columns of both prediction data frames:
+A description of the columns of both prediction data frames, upcoming and future:
 \tabular{ll}{
  \code{Comment} \tab A warning if prediction may not be accurate \cr
  \code{Home Estimate} \tab Prediction of the number of goals scored by the home team, rounded to nearest integer\cr
