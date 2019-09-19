@@ -4,11 +4,11 @@
 #' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
 #' @param team A team name as string.
 #' @param cumulated If \code{TRUE}, the cummulated goal differences are plotted, if \code{FALSE} the individual differences for every game are plotted.
-#' @details Description of the colors of the data points:
+#' @details Description of the colours of the data points:
 #' \tabular{ll}{
-#' Green \tab  Don matches \cr
-#' Orange \tab  Draws \cr
-#' Red \tab  Lost matches
+#' Green \tab  Matches won \cr
+#' Orange \tab  Matches drawn \cr
+#' Red \tab  Matches lost
 #' }
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
@@ -57,11 +57,11 @@ plot_goal_difference <- function(game_data, team, cumulated = TRUE) {
 #' This function plots the cummulated points for one specified team.
 #' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
 #' @param team  A team name as string.
-#' @details Description of the colors of the data points:
+#' @details Description of the colours of the data points:
 #' \tabular{ll}{
-#' Green \tab  Don matches \cr
-#' Orange \tab  Draws \cr
-#' Red \tab  Lost matches
+#' Green \tab  Matches won \cr
+#' Orange \tab Matches drawn \cr
+#' Red \tab  Matches lost
 #' }
 #' @importFrom dplyr filter
 #' @importFrom magrittr %>%
@@ -106,7 +106,7 @@ plot_points <- function(game_data, team) {
 #' plot_test
 #'
 #' This is an internal function for \code{\link[amateuR]{plot_goal_difference}} and \code{\link[amateuR]{plot_points}}.
-#' It performs a test if the team name is correct and if there are enought data points for a plot.
+#' It performs a test if the team name is correct and if there are enough data points for a plot.
 #' @param game_data A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 #' @param team A team name as string.
 #' @importFrom magrittr %>%

@@ -1,6 +1,6 @@
 #' Plotting the Dixon Coles prediction with confidence interval for a given match
 #'
-#' This function allows the user to plot the dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis.
+#' This function allows the user to plot the Dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis.
 #' @param game_data Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}
 #' @param estimate Output of \code{\link[amateuR]{estimate_params}} using the same data
 #' @param home Home team name as a string

@@ -15,11 +15,11 @@ plot_points(game_data, team)
 This function plots the cummulated points for one specified team.
 }
 \details{
-Description of the colors of the data points:
+Description of the colours of the data points:
 \tabular{ll}{
-Green \tab  Don matches \cr
-Orange \tab  Draws \cr
-Red \tab  Lost matches
+Green \tab  Matches won \cr
+Orange \tab Matches drawn \cr
+Red \tab  Matches lost
 }
 }
 \examples{

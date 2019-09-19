@@ -3,14 +3,14 @@
 #' This function returns point estimates for the number of home and away goals for all remaining matches for one team.
 #' @param data Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}
 #' @param estimate Output of \code{\link[amateuR]{estimate_params}} using the same data
-#' @param teamname The name of the team of intrest as a string
+#' @param teamname The name of the team of interest as a string
 #' @param method Optional parameter which takes the values \code{"all"}, \code{"past"} or \code{"future"} to filter predictions
 #' @return A description of the columns of both prediction data frames, upcoming and future:
 #' \tabular{ll}{
-#'  \code{Comment} \tab A warning if prediction may not be accurate \cr
-#'  \code{Home Estimate} \tab Prediction of the number of goals scored by the home team, rounded to nearest integer\cr
-#'  \code{Away Estimate} \tab Prediction of the number of goals scored by the away team, rounded to nearest integer \cr
-#'  \code{Final Score} \tab the full time score for past games
+#'  \code{Comment} \tab A simple warning if the prediction may not be accurate \cr
+#'  \code{Home Estimate} \tab Prediction of the number of goals scored by the \emph{home team}, rounded to nearest integer\cr
+#'  \code{Away Estimate} \tab Prediction of the number of goals scored by the \emph{away team}, rounded to nearest integer \cr
+#'  \code{Final Score} \tab The full time score for past games
 #' }
 #' @importFrom dplyr filter
 #' @examples
@@ -193,6 +193,7 @@ prediction_interval <- function(data, estimate, teamname, method = "future") {
   all_teams <- sort(unique(c(visitor_teams, home_teams))) # all teams who have played at least once at home or away
   n_teams <- length(all_teams)
 
+  # errors and warnings if prediction cannot be made or results may be unreliable
   if (!(teamname %in% c(all_teams, "NA"))) {
     stop("Error: Team name invalid")
   }
@@ -251,7 +252,7 @@ prediction_interval <- function(data, estimate, teamname, method = "future") {
     mu[i + n_teams] <- exp(CI[paste0("defense.", all_teams[i]), "estimate"] + CI[attack.teamname, "estimate"])
     muU[i + n_teams] <- exp(CI[paste0("defense.", all_teams[i]), "U"] + CI[attack.teamname, "U"])
 
-    # If match in the past, return the actual score
+    # If match in the past, return the actual full time score
     if (nrow(dplyr::filter(dat, Home == teamname & Away == vteamname)) == 1) {
       realsc[i] <- as.character(dplyr::filter(dat, Home == teamname & Away == vteamname)$FT)
     }
@@ -263,6 +264,7 @@ prediction_interval <- function(data, estimate, teamname, method = "future") {
 
   # warning stars dependent on size of interval
   for (i in 1:(2 * n_teams)) {
+    # for away team
     warning_A <- as.vector(round(muU, 0) - round(muL, 0))
     if (is.na(warning_A[i])) {
       Note_A[i] <- "NA"
@@ -279,7 +281,7 @@ prediction_interval <- function(data, estimate, teamname, method = "future") {
     else if (warning_A[i] >= 3) {
       Note_A[i] <- "***"
     }
-
+    # for home team
     warning_H <- as.vector(round(lambdaU, 0) - round(lambdaL, 0))
     if (is.na(warning_H[i])) {
       Note_H[i] <- "NA"
@@ -329,8 +331,7 @@ prediction_interval <- function(data, estimate, teamname, method = "future") {
   muL <- round(muL, 1)
   muU <- round(muU, 1)
 
-  names(lambda) <- all_teams
-  names(mu) <- all_teams
+  # assigning names
   names(lambdaL) <- c(rep(teamname, n_teams), all_teams)
   names(lambdaU) <- c(rep(teamname, n_teams), all_teams)
   names(lambda) <- c(rep(teamname, n_teams), all_teams)

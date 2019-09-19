@@ -13,6 +13,6 @@ plot_test(game_data, team)
 }
 \description{
 This is an internal function for \code{\link[amateuR]{plot_goal_difference}} and \code{\link[amateuR]{plot_points}}.
-It performs a test if the team name is correct and if there are enought data points for a plot.
+It performs a test if the team name is correct and if there are enough data points for a plot.
 }
 \keyword{internal}
