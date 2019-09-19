@@ -2,7 +2,7 @@
 % Please edit documentation in R/prediction_plots.R
 \name{plot_predictions}
 \alias{plot_predictions}
-\title{Plotting the Dixon Coles prediction with confidence interval for a single team}
+\title{Plotting the Dixon Coles prediction with a confidence interval for a single team}
 \usage{
 plot_predictions(game_data, estimate, team_name, method = "future")
 }
@@ -20,6 +20,13 @@ plot_predictions(game_data, estimate, team_name, method = "future")
 \description{
 This function allows the user to plot the Dixon Coles estimate in a 2d diagram for a given team.
 Use the optional argument \code{method} to return all or just future matches.
+}
+\details{
+\tabular{ll}{
+Red point \tab The final full time score for a past match\cr
+Black circle \tab The point estimate \cr
+Black box \tab  Confidence interval
+}
 }
 \examples{
 my_games <- all_game_data(download_league_data(

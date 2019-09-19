@@ -1,10 +1,16 @@
-#' Plotting the Dixon Coles prediction with confidence interval for a given match
+#' Plotting the Dixon Coles prediction with a confidence interval for a given match
 #'
 #' This function allows the user to plot the Dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis.
 #' @param game_data Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}
 #' @param estimate Output of \code{\link[amateuR]{estimate_params}} using the same data
 #' @param home Home team name as a string
 #' @param away Away team name as a string
+#' @details
+#' \tabular{ll}{
+#' Red point \tab The final full time score for a past match\cr
+#' Black circle \tab The point estimate \cr
+#' Black box \tab  Confidence interval
+#' }
 #' @importFrom dplyr filter
 #' @importFrom graphics abline legend par plot plot.new points rect segments
 #' @examples
@@ -87,7 +93,7 @@ plot_single_match <- function(game_data, estimate, home, away) {
   )
 }
 
-#' Plotting the Dixon Coles prediction with confidence interval for a single team
+#' Plotting the Dixon Coles prediction with a confidence interval for a single team
 #'
 #' This function allows the user to plot the Dixon Coles estimate in a 2d diagram for a given team.
 #' Use the optional argument \code{method} to return all or just future matches.
@@ -97,6 +103,12 @@ plot_single_match <- function(game_data, estimate, home, away) {
 #' @param method \code{method = "futureH"} returns all predictions for future home matches \cr
 #' \code{method = "futureHA"} returns all predictions for future home and away matchs \cr
 #' \code{method = "allH"} returns all predictions for past and future home matches
+#' @details
+#' \tabular{ll}{
+#' Red point \tab The final full time score for a past match\cr
+#' Black circle \tab The point estimate \cr
+#' Black box \tab  Confidence interval
+#' }
 #' @importFrom dplyr filter
 #' @importFrom graphics abline legend par plot plot.new points rect segments
 #' @examples

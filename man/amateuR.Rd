@@ -6,7 +6,7 @@
 \alias{amateuR-package}
 \title{Prediction for amateur German football outcomes}
 \description{
-amateuR is a R Package for obtaining data for amateur German football leagues and predicting future matches with a Dixon Coles Model.
+amateuR is an R Package for obtaining data for amateur German football leagues and predicting future matches with a Dixon Coles Model.
 }
 \details{
 The package provides functions to download German amateur football data from kicker.de by using web scraping methods and the rvest package.

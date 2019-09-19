@@ -2,7 +2,7 @@
 % Please edit documentation in R/prediction_plots.R
 \name{plot_single_match}
 \alias{plot_single_match}
-\title{Plotting the Dixon Coles prediction with confidence interval for a given match}
+\title{Plotting the Dixon Coles prediction with a confidence interval for a given match}
 \usage{
 plot_single_match(game_data, estimate, home, away)
 }
@@ -17,6 +17,13 @@ plot_single_match(game_data, estimate, home, away)
 }
 \description{
 This function allows the user to plot the Dixon Coles estimate in a 2d diagram with the home team on the x axis and the away team on the y axis.
+}
+\details{
+\tabular{ll}{
+Red point \tab The final full time score for a past match\cr
+Black circle \tab The point estimate \cr
+Black box \tab  Confidence interval
+}
 }
 \examples{
 my_games <- all_game_data(download_league_data(
