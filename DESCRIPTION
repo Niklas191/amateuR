@@ -1,15 +1,14 @@
 Package: amateuR
 Title: Prediction for amateur German football outcomes
 Version: 0.0.0.9000
-Authors@R: as.person(c(
-    "James Travis <james.travis@stud.uni-goettingen.de> [aut]",
-    "Niklas Hagemann <niklas.hagemann@stud.uni-goettingen.de> [aut, cre]"
-  ))
+Authors@R: c(
+    person("Hagemann", "Niklas", email = "niklas.hagemann@stud.uni-goettingen.de", role = c("cre", "aut")),
+    person("Travis", "James", email = "james.travis@stud.uni-goettingen.de", role = "aut"))
 Description: The package provides functions to download German amateur football data from kicker.de. Based on the downloaded data the table, individual game results and the date and time of future games can be shown. It does also provides a function for predicting future games. Some of the results can visualized using specific plot functions.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Depends: R (>= 3.5.0)
-Imports: MASS, dplyr, rvest, stringi, xml2, magrittr
+Depends: R (>= 3.5.3)
+Imports: MASS (>= 7.3-51.4), dplyr (>= 0.8.0.1), rvest (>= 0.3.4), stringi(>= 1.4.3), xml2(>= 1..2.0), magrittr (>= 1.5)
 Suggests: testthat
