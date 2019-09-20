@@ -35,15 +35,15 @@ test_that("plot function does not give any output", {
 })
 
 test_that("Test that estimate_params returns a list", {
-  expect_type(estimate_params(all_game_data(download_league_data("https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1")), alpha = 0.9), "list")
+  testthat::expect_type(estimate_params(all_game_data(download_league_data("https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1")), alpha = 0.9), "list")
 })
 
 test_that("Test that estimate_params gives error if alpha is wrong", {
-  expect_error(estimate_params(all_game_data(download_league_data("https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1")), alpha = 2))
+  testthat::expect_error(estimate_params(all_game_data(download_league_data("https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1")), alpha = 2))
 })
 
 test_that("Test that prediction returns an error for an invalid team", {
-  expect_error(prediction(
+  testthat::expect_error(prediction(
     data = all_game_data(download_league_data(
       "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
     )),

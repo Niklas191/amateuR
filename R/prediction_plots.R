@@ -60,8 +60,6 @@ plot_single_match <- function(game_data, estimate, home, away) {
   mu <- exp(CI[paste0("attack.", V), "estimate"] + CI[paste0("defense.", H), "estimate"])
   muU <- exp(CI[paste0("attack.", V), "U"] + CI[paste0("defense.", H), "U"])
 
-  print(c(lambdaL, lambda, lambdaU))
-  print(c(muL, mu, muU))
   plot(lambda, mu,
     xlab = "Home Goals", ylab = "Away Goals", xlim = c(0, 10), ylim = c(0, 10),
     main = paste0(H, " vs ", V)
@@ -73,7 +71,7 @@ plot_single_match <- function(game_data, estimate, home, away) {
     fth <- as.character(dplyr::filter(dat, Home == H & Away == V)$Goals_Home)
     fta <- as.character(dplyr::filter(dat, Home == H & Away == V)$Goals_Away)
     points(fth, fta, pch = 19, col = 2, lwd = 3)
-    print(fth, fta)
+    # print(fth, fta)
   }
 
   # drawing the confidence region

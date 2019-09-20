@@ -108,7 +108,8 @@ prediction <- function(data, estimate, teamname, method = "future") {
   prediction <- data.frame(
     c(rep(teamname, n_teams), all_teams),
     c(all_teams, rep(teamname, n_teams)), as.vector(lambda), ":",
-    as.vector(mu), result, Comment, completed
+    as.vector(mu), result, Comment, completed,
+    stringsAsFactors = FALSE
   )
   colnames(prediction) <- c(
     "Home Team", "Away Team", "Home estimate", ":",
@@ -329,7 +330,8 @@ prediction_interval <- function(data, estimate, teamname, method = "future") {
   prediction <- data.frame(
     c(rep(teamname, n_teams), all_teams), c(all_teams, rep(teamname, n_teams)), as.vector(lambdaL),
     as.vector(lambda), as.vector(lambdaU), ":", as.vector(muL), as.vector(mu),
-    as.vector(muU), Note_H, Note_A, result, as.character(realsc)
+    as.vector(muU), Note_H, Note_A, result, as.character(realsc),
+    stringsAsFactors = FALSE
   )
 
   colnames(prediction) <- c(

@@ -15,6 +15,5 @@ The Dataset contains the data vector of the Kreisliga Göttingen-Osterode in the
 \examples{
 all_game_data(amateuR::kreisliga_goettingen)
 current_table(amateuR::kreisliga_goettingen)
-
 }
 \keyword{datasets}
