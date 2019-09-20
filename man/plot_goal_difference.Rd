@@ -25,8 +25,7 @@ Red \tab  Matches lost
 }
 }
 \examples{
-data <- download_league_data("https://www.kicker.de/kreisliga-osterode-fb-1/spieltag/2019-20/-1")
-data <- all_game_data(data)
+data <- all_game_data(amateuR::kreisliga_goettingen)
 plot_goal_difference(game_data = data, team = "RSV Göttingen 05", cumulated = TRUE)
 plot_goal_difference(game_data = data, team = "RSV Göttingen 05", cumulated = FALSE)
 }

@@ -14,14 +14,12 @@
 #' @importFrom dplyr filter
 #' @importFrom graphics abline legend par plot plot.new points rect segments
 #' @examples
-#' my_games <- all_game_data(download_league_data(
-#'   "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-#' ))
+#' my_games <- all_game_data(amateuR::kreisliga_goettingen)
 #' estimate <- estimate_params(data = my_games, alpha = 0.9)
 #'
 #' plot_single_match(
 #'   game_data = my_games, estimate = estimate,
-#'   home = "1. FC Schöneberg III", away = "Berliner SC III"
+#'   home = "RSV Göttingen 05", away = "TSC Dorste"
 #' )
 #' @export
 
@@ -35,10 +33,6 @@ plot_single_match <- function(game_data, estimate, home, away) {
     dat$FT[i] <- paste0(as.character(dat$Goals_Home[i]), ":", as.character(dat$Goals_Away[i]))
   }
 
-  dat$Home <- as.character(dat$Home)
-  dat$Away <- as.character(dat$Away)
-  dat$Goals_Away <- as.numeric(as.character(dat$Goals_Away))
-  dat$Goals_Home <- as.numeric(as.character(dat$Goals_Home))
   visitor_teams <- as.vector(sort(unique(dat$Home)))
   home_teams <- as.vector(sort(unique(dat$Away)))
   all_teams <- sort(unique(c(visitor_teams, home_teams))) # all teams who have played at least once at home or away
@@ -112,11 +106,9 @@ plot_single_match <- function(game_data, estimate, home, away) {
 #' @importFrom dplyr filter
 #' @importFrom graphics abline legend par plot plot.new points rect segments
 #' @examples
-#' my_games <- all_game_data(download_league_data(
-#'   "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-#' ))
+#' my_games <- all_game_data(amateuR::kreisliga_goettingen)
 #' estimate <- estimate_params(data = my_games, alpha = 0.9)
-#' plot_predictions(game_data = my_games, estimate = estimate, "VfB Hermsdorf III", method = "allH")
+#' plot_predictions(game_data = my_games, estimate = estimate, "RSV Göttingen 05", method = "allH")
 #' @export
 
 plot_predictions <- function(game_data, estimate, team_name, method = "future") {
@@ -125,10 +117,6 @@ plot_predictions <- function(game_data, estimate, team_name, method = "future") 
   for (i in 1:nrow(dat)) {
     dat$FT[i] <- paste0(as.character(dat$Goals_Home[i]), ":", as.character(dat$Goals_Away[i]))
   }
-  dat$Home <- as.character(dat$Home)
-  dat$Away <- as.character(dat$Away)
-  dat$Goals_Away <- as.numeric(as.character(dat$Goals_Away))
-  dat$Goals_Home <- as.numeric(as.character(dat$Goals_Home))
 
   visitor_teams <- as.vector(sort(unique(dat$Home)))
   home_teams <- as.vector(sort(unique(dat$Away)))

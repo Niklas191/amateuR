@@ -26,13 +26,11 @@ Black box \tab  Confidence interval
 }
 }
 \examples{
-my_games <- all_game_data(download_league_data(
-  "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-))
+my_games <- all_game_data(amateuR::kreisliga_goettingen)
 estimate <- estimate_params(data = my_games, alpha = 0.9)
 
 plot_single_match(
   game_data = my_games, estimate = estimate,
-  home = "1. FC Schöneberg III", away = "Berliner SC III"
+  home = "RSV Göttingen 05", away = "TSC Dorste"
 )
 }

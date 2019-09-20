@@ -29,9 +29,7 @@ Black box \tab  Confidence interval
 }
 }
 \examples{
-my_games <- all_game_data(download_league_data(
-  "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-))
+my_games <- all_game_data(amateuR::kreisliga_goettingen)
 estimate <- estimate_params(data = my_games, alpha = 0.9)
-plot_predictions(game_data = my_games, estimate = estimate, "VfB Hermsdorf III", method = "allH")
+plot_predictions(game_data = my_games, estimate = estimate, "RSV Göttingen 05", method = "allH")
 }

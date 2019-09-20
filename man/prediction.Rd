@@ -28,9 +28,7 @@ A description of the columns of both prediction data frames, upcoming and future
 This function returns point estimates for the number of home and away goals for all remaining matches for one team.
 }
 \examples{
-my_games <- all_game_data(download_league_data(
-  "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-))
+my_games <- all_game_data(amateuR::kreisliga_goettingen)
 estimate <- estimate_params(data = my_games, alpha = 0.9)
-prediction(data = my_games, estimate = estimate, teamname = "1. FC Schöneberg III", method = "all")
+prediction(data = my_games, estimate = estimate, teamname = "RSV Göttingen 05", method = "all")
 }

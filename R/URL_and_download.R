@@ -8,7 +8,7 @@
 #' @export
 
 build_league_url <- function(league_url_name, season = "2018-19") {
-  if (any((nchar(season)) != 7 | (unlist(strsplit(season, split = ""))[c(1,2,5)] != c("2", "0", "-")))){
+  if (any((nchar(season)) != 7 | (unlist(strsplit(season, split = ""))[c(1, 2, 5)] != c("2", "0", "-")))) {
     stop("Incorrect format for season!")
   }
 

@@ -16,9 +16,6 @@ Set up and optimise a bipoisson likelihood function with the DC correction.
 This function returns parameter estimates with Wald Confidence intervals.
 }
 \examples{
-my_games <- all_game_data(download_league_data(
-  "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-))
-
+my_games <- all_game_data(amateuR::kreisliga_goettingen)
 estimate_params(data = my_games, alpha = 0.9)
 }

@@ -15,7 +15,5 @@ all_game_data(league_data, team = NA)
 This function extracts past gameday results and date and time of future games from the league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 }
 \examples{
-all_game_data(download_league_data(
-  "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-))
+all_game_data(amateuR::kreisliga_goettingen)
 }

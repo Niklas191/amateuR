@@ -3,9 +3,7 @@
 #' This function extracts the current table from the league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 #' @param league_data A league data vector, which is created with \code{\link[amateuR]{download_league_data}}.
 #' @examples
-#' current_table(download_league_data(
-#'   "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-#' ))
+#' current_table(amateuR::kreisliga_goettingen)
 #' @export
 
 current_table <- function(league_data) {
@@ -25,7 +23,7 @@ current_table <- function(league_data) {
   data <- matrix(data, ncol = 5, byrow = TRUE) %>% as.data.frame(stringsAsFactors = FALSE)
   data <- data[-1, ]
   colnames(data) <- c("Position", "Team", "Games", "Goal Diff.", "Points")
-  rownames(data) <- as.character(seq(1,nrow(data)))
+  rownames(data) <- as.character(seq(1, nrow(data)))
 
   return(data)
 }

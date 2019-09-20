@@ -37,10 +37,7 @@ tau <- Vectorize(function(x, y, lambda, mu, rho) {
 #' @importFrom stats dpois optim qnorm
 #' @importFrom utils relist
 #' @examples
-#' my_games <- all_game_data(download_league_data(
-#'   "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
-#' ))
-#'
+#' my_games <- all_game_data(amateuR::kreisliga_goettingen)
 #' estimate_params(data = my_games, alpha = 0.9)
 #' @export
 
@@ -54,10 +51,7 @@ estimate_params <- function(data, alpha = 0.9) {
     dat$FT[i] <- paste0(as.character(dat$Goals_Home[i]), ":", as.character(dat$Goals_Away[i]))
   }
 
-  dat$Home <- as.character(dat$Home)
-  dat$Away <- as.character(dat$Away)
-  dat$Goals_Away <- as.numeric(as.character(dat$Goals_Away))
-  dat$Goals_Home <- as.numeric(as.character(dat$Goals_Home))
+
   visitor_teams <- as.vector(sort(unique(dat$Home)))
   home_teams <- as.vector(sort(unique(dat$Away)))
   all_teams <- sort(unique(c(visitor_teams, home_teams))) ## all teams who have played at least once at home or away
