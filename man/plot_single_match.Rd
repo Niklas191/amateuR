@@ -22,7 +22,7 @@ This function allows the user to plot the Dixon Coles estimate in a 2d diagram w
 \tabular{ll}{
 Red point \tab The final full time score for a past match\cr
 Black circle \tab The point estimate \cr
-Black box \tab  Confidence interval
+Black box \tab  Confidence interval as generated in \code{\link[amateuR]{estimate_params}}
 }
 }
 \examples{

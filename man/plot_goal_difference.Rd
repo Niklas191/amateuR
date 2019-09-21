@@ -9,7 +9,7 @@ plot_goal_difference(game_data, team, cumulated = TRUE)
 \arguments{
 \item{game_data}{Output of the function \code{\link[amateuR]{all_game_data}}.}
 
-\item{team}{A team name as string.}
+\item{team}{A team name as a string.}
 
 \item{cumulated}{If \code{TRUE}, the cummulated goal differences are plotted, if \code{FALSE} the individual differences for every game are plotted.}
 }

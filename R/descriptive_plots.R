@@ -2,7 +2,7 @@
 #'
 #' This function plots the goal differences for one specified team.
 #' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
-#' @param team A team name as string.
+#' @param team A team name as a string.
 #' @param cumulated If \code{TRUE}, the cummulated goal differences are plotted, if \code{FALSE} the individual differences for every game are plotted.
 #' @details Description of the colours of the data points:
 #' \tabular{ll}{

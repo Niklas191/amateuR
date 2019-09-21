@@ -29,8 +29,7 @@ tau <- Vectorize(function(x, y, lambda, mu, rho) {
 
 #' Initialising data
 #'
-#' Set up and optimise a bipoisson likelihood function with the DC correction.
-#' This function returns parameter estimates with Wald Confidence intervals.
+#' This function sets up and optimises a bipoisson likelihood function with the DC correction. It returns parameter estimates with Wald Confidence intervals.
 #' @param data Output of \code{\link[amateuR]{all_game_data}} without specifying a team
 #' @param alpha Significance level for confidence intervals
 #' @importFrom MASS ginv
@@ -108,12 +107,12 @@ estimate_params <- function(data, alpha = 0.9) {
 #' Negative loglikelihood function
 #'
 #' This is an internal function for \code{\link[amateuR]{estimate_params}}
-#' @param params likelihood param
-#' @param goals_home likelihood param
-#' @param goals_visitor likelihood param
-#' @param team_home likelihood param
-#' @param team_visitor likelihood param
-#' @param structure structure
+#' @param params list of paramters
+#' @param goals_home likelihood parameter
+#' @param goals_visitor likelihood parameter
+#' @param team_home likelihood parameter
+#' @param team_visitor likelihood parameter
+#' @param structure correct structure format for parameters
 #' @importFrom stats dpois optim qnorm
 #' @importFrom utils relist
 #' @keywords internal

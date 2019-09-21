@@ -8,17 +8,17 @@ negloglik(params, goals_home, goals_visitor, team_home, team_visitor,
   structure)
 }
 \arguments{
-\item{params}{likelihood param}
+\item{params}{list of paramters}
 
-\item{goals_home}{likelihood param}
+\item{goals_home}{likelihood parameter}
 
-\item{goals_visitor}{likelihood param}
+\item{goals_visitor}{likelihood parameter}
 
-\item{team_home}{likelihood param}
+\item{team_home}{likelihood parameter}
 
-\item{team_visitor}{likelihood param}
+\item{team_visitor}{likelihood parameter}
 
-\item{structure}{structure}
+\item{structure}{correct structure format for parameters}
 }
 \description{
 This is an internal function for \code{\link[amateuR]{estimate_params}}

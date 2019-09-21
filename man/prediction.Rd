@@ -19,13 +19,13 @@ prediction(data, estimate, teamname, method = "future")
 A description of the columns of both prediction data frames, upcoming and future:
 \tabular{ll}{
  \code{Comment} \tab A simple warning if the prediction may not be accurate \cr
- \code{Home Estimate} \tab Prediction of the number of goals scored by the \emph{home team}, rounded to nearest integer\cr
+ \code{Home Estimate} \tab Prediction of the number of goals scored by the \emph{home team}, rounded to nearest integer \cr
  \code{Away Estimate} \tab Prediction of the number of goals scored by the \emph{away team}, rounded to nearest integer \cr
  \code{Final Score} \tab The full time score for past games
 }
 }
 \description{
-This function returns point estimates for the number of home and away goals for all remaining matches for one team.
+This function returns point estimates for the number of home and away goals in matches for one specified team.
 }
 \examples{
 my_games <- all_game_data(amateuR::kreisliga_goettingen)

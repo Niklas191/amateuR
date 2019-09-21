@@ -11,7 +11,7 @@ plot_predictions(game_data, estimate, team_name, method = "future")
 
 \item{estimate}{Output of \code{\link[amateuR]{estimate_params}} using the same data}
 
-\item{team_name}{Home team name as string}
+\item{team_name}{Home team name as a string}
 
 \item{method}{\code{method = "futureH"} returns all predictions for future home matches \cr
 \code{method = "futureHA"} returns all predictions for future home and away matchs \cr
@@ -25,7 +25,7 @@ Use the optional argument \code{method} to return all or just future matches.
 \tabular{ll}{
 Red point \tab The final full time score for a past match\cr
 Black circle \tab The point estimate \cr
-Black box \tab  Confidence interval
+Black box \tab  Confidence interval as generated in \code{\link[amateuR]{estimate_params}}
 }
 }
 \examples{

@@ -12,8 +12,7 @@ estimate_params(data, alpha = 0.9)
 \item{alpha}{Significance level for confidence intervals}
 }
 \description{
-Set up and optimise a bipoisson likelihood function with the DC correction.
-This function returns parameter estimates with Wald Confidence intervals.
+This function sets up and optimises a bipoisson likelihood function with the DC correction. It returns parameter estimates with Wald Confidence intervals.
 }
 \examples{
 my_games <- all_game_data(amateuR::kreisliga_goettingen)

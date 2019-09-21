@@ -33,7 +33,7 @@ A description of the columns of prediction data frames, \emph{upcoming} and \emp
 }
 }
 \description{
-This function returns point estimates for the number of home and away goals for all remaining matches for one team.
+This function returns point estimates and a confidence interval for the number of home and away goals scored in a match.
 }
 \examples{
 my_games <- all_game_data(amateuR::kreisliga_goettingen)

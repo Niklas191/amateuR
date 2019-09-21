@@ -3,14 +3,14 @@
 \docType{data}
 \name{kreisliga_goettingen}
 \alias{kreisliga_goettingen}
-\title{Dataset of the Kreisliga Goettingen-Osterode}
+\title{Dataset for the Kreisliga Goettingen-Osterode}
 \format{An object of class \code{character} of length 2043.}
 \usage{
 kreisliga_goettingen
 }
 \description{
 Dataset for testing the amateuR package.
-The Dataset contains the data vector of the Kreisliga Göttingen-Osterode in the 2019-20 season, which was downloaded at 2019-09-20.
+The dataset contains the data vector for the Kreisliga Göttingen-Osterode in the 2019-20 season, which was downloaded at 2019-09-20.
 }
 \examples{
 all_game_data(amateuR::kreisliga_goettingen)
