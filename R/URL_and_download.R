@@ -4,7 +4,7 @@
 #' @param league_url_name A unique name for the league used in the URL. Copy this one from kicker.de!
 #' @param season The season you are interested in. Since a season always lasts from summer to summer, these are two years. The format is \code{"YYYY-YY"} and the default value is \code{"2018-19"}. Please make sure, the season of interest is still/already online.
 #' @examples
-#' build_league_url("berlin-kreisklasse-a-staffel-1-6322", season = "2019-20")
+#' build_league_url("kreisliga-osterode-fb-1", "2019-20")
 #' @export
 
 build_league_url <- function(league_url_name, season = "2018-19") {
@@ -24,7 +24,7 @@ build_league_url <- function(league_url_name, season = "2018-19") {
 #' @importFrom xml2 read_html
 #' @examples
 #' download_league_data(
-#'   "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
+#'   "https://www.kicker.de/kreisliga-osterode-fb-1/spieltag/2019-20/-1"
 #' )
 #'
 #' download_league_data(build_league_url(

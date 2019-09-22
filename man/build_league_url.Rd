@@ -15,5 +15,5 @@ build_league_url(league_url_name, season = "2018-19")
 This function allows you to build a URL for using the function \code{\link[amateuR]{download_league_data}}.
 }
 \examples{
-build_league_url("berlin-kreisklasse-a-staffel-1-6322", season = "2019-20")
+build_league_url("kreisliga-osterode-fb-1", "2019-20")
 }

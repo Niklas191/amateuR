@@ -14,7 +14,7 @@ This function downloads data from kicker.de! Please note that this function is o
 }
 \examples{
 download_league_data(
-  "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
+  "https://www.kicker.de/kreisliga-osterode-fb-1/spieltag/2019-20/-1"
 )
 
 download_league_data(build_league_url(
