@@ -6,7 +6,7 @@ test_that("Warning if format of season is incorrect", {
   expect_warning(build_league_url(league_url_name = "kreisliga-osterode-fb-1", season = "2019-2020"))
 })
 
-test_that("Warning, if the team name is wrong", {
+test_that("Warning, if the team name is invalid", {
   expect_warning(all_game_data(league_data = amateuR::kreisliga_goettingen, team = "This does not make any sense"))
 })
 
@@ -48,6 +48,6 @@ test_that("Test that prediction returns an error for an invalid team", {
       "https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1"
     )),
     CI = (estimate_params(all_game_data(download_league_data("https://www.kicker.de/berlin-kreisklasse-a-staffel-1-6322/spieltag/2018-19/-1")), alpha = 0.9)),
-    teamname = "1. FC Schöneberg", method = "all"
-  )) ## false name here
+    teamname = "This does not make any sense", method = "all"
+  ))
 })

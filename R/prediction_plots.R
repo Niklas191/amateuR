@@ -71,7 +71,6 @@ plot_single_match <- function(game_data, estimate, home, away) {
     fth <- as.character(dplyr::filter(dat, Home == H & Away == V)$Goals_Home)
     fta <- as.character(dplyr::filter(dat, Home == H & Away == V)$Goals_Away)
     points(fth, fta, pch = 19, col = 2, lwd = 3)
-    # print(fth, fta)
   }
 
   # drawing the confidence region
