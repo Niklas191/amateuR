@@ -7,7 +7,7 @@
 download_league_data(league_url)
 }
 \arguments{
-\item{league_url}{The URL of the kicker.de webpage of the league of interest. Please create this with \code{\link[amateuR]{build_league_url}}. Alternativly you can copy & paste it manually, but make sure it ends with \code{"/-1"}.}
+\item{league_url}{The URL of the kicker.de webpage of the league of interest. Please create this with \code{\link[amateuR]{build_league_url}}. Alternatively you can copy & paste it manually, but make sure it ends with \code{"/-1"}.}
 }
 \description{
 This function downloads data from kicker.de! Please note that this function is only for the download of German amateur football leagues. It works mostly for professional and international leagues, but occasionally errors can occur here.

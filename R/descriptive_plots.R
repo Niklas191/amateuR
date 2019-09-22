@@ -60,9 +60,9 @@ plot_goal_difference <- function(game_data, team, cumulated = TRUE) {
 
 #' Plot the points
 #'
-#' This function plots the cummulated points for one specified team.
+#' This function plots the cumulated points for one specified team.
 #' @param game_data Output of the function \code{\link[amateuR]{all_game_data}}.
-#' @param team  A team name as string.
+#' @param team A team name as string.
 #' @details Description of the colours of the data points:
 #' \tabular{ll}{
 #' Green \tab  Matches won \cr

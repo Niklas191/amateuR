@@ -12,7 +12,7 @@ plot_points(game_data, team)
 \item{team}{A team name as string.}
 }
 \description{
-This function plots the cummulated points for one specified team.
+This function plots the cumulated points for one specified team.
 }
 \details{
 Description of the colours of the data points:

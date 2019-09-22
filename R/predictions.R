@@ -135,12 +135,12 @@ prediction <- function(data, estimate, teamname, method = "future") {
   }
 }
 
-#' Point estimate fuction and confidence intervals for footbal predictions
+#' Point estimate function and confidence intervals for football predictions
 #'
 #' This function returns point estimates and a confidence interval for the number of home and away goals scored in a match.
 #' @param data Output of \code{\link[amateuR]{all_game_data}} with parameter \code{team = NA}
 #' @param estimate Output of \code{\link[amateuR]{estimate_params}} using the same data
-#' @param teamname The name of the team of intrest as a string
+#' @param teamname The name of the team of interest as a string
 #' @param method Optional parameter which takes the values \code{"all"}, \code{"past"} or \code{"future"} to filter predictions
 #' @return A description of the columns of prediction data frames, \emph{upcoming} and \emph{future}:
 #' \tabular{ll}{
@@ -152,8 +152,8 @@ prediction <- function(data, estimate, teamname, method = "future") {
 #'  \code{Away Estimate} \tab Prediction of the number of goals scored by the \emph{away team}, rounded to nearest integer \cr
 #'  \code{Away U} \tab Upper bound of confidence interval for the predicted number of goals scored by the \emph{away team} \cr
 #'  \code{} \tab \cr
-#'  \code{Note H} \tab The number of stars indicate the with of the confidence interval for the \emph{home team}. The more stars the larger the interval \cr
-#'  \code{Note A} \tab The number of stars indicate the with of the confidence interval for the \emph{away team}. The more stars the larger the interval \cr
+#'  \code{Note H} \tab The number of stars indicate the width of the confidence interval for the \emph{home team}. The more stars the larger the interval \cr
+#'  \code{Note A} \tab The number of stars indicate the width of the confidence interval for the \emph{away team}. The more stars the larger the interval \cr
 #'  \code{Predicted result} \tab Home and away intervals are compared and H,D,A is returned based on the prediction \cr
 #'  \code{Final Score} \tab For a completed match the final full time score is given here
 #' }

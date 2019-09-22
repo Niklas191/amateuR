@@ -7,7 +7,7 @@
 build_league_url(league_url_name, season = "2018-19")
 }
 \arguments{
-\item{league_url_name}{An unique name for the leaugue used in the URL. Copy this one from kicker.de!}
+\item{league_url_name}{A unique name for the league used in the URL. Copy this one from kicker.de!}
 
 \item{season}{The season you are interested in. Since a season always lasts from summer to summer, these are two years. The format is \code{"YYYY-YY"} and the default value is \code{"2018-19"}. Please make sure, the season of interest is still/already online.}
 }

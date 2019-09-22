@@ -1,2 +1,2 @@
 # amateuR
-R package for predicting amateur football outcomes
+An R package for predicting amateur football outcomes

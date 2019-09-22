@@ -114,7 +114,7 @@ started_season_data_wrangling <- function(data, future_games) {
 
 #' all_game_data_filter
 #'
-#' This is an internal function for \code{\link[amateuR]{all_game_data}}, it perfoms the optional filter for \code{\link[amateuR]{all_game_data}}.
+#' This is an internal function for \code{\link[amateuR]{all_game_data}}, it performs the optional filter for \code{\link[amateuR]{all_game_data}}.
 #' @param L Unfiltered result
 #' @param team \code{NA}, a team name or a vector of team names. If \code{NA} (default), all games are returned. If team is specified, only the games of this team(s) are returned. If you want to use the result for prediction, use NA.
 #' @importFrom dplyr filter
