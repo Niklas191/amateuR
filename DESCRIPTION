@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: c(
     person("Hagemann", "Niklas", email = "niklas.hagemann@stud.uni-goettingen.de", role = c("cre", "aut")),
     person("Travis", "James", email = "james.travis@stud.uni-goettingen.de", role = "aut"))
-Description: The package provides functions to download German amateur football data from kicker.de. Based on the downloaded data the table, individual game results and the date and time of future games can be shown. It does also provides a function for predicting future games. Some of the results can visualized using specific plot functions.
+Description: The package provides functions to obtain German amateur football data from kicker.de. Based on this data, the table, individual game results and the date and time of future games can be shown. It also provides a function for predicting future games. Some of the results can be visualised using specific plot functions.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
